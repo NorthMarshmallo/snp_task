@@ -1,13 +1,19 @@
 [project]
 name = "snp-planner"
 version = "0.1.0"
-description = "A deterministic supply planning exercise"
+description = "Детерминированное планирование распределения запасов"
 requires-python = ">=3.10"
 dependencies = []
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "ruff>=0.16"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "PLW1510"]
